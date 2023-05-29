@@ -1,0 +1,49 @@
+﻿@model List<Aluno>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <a role="button" asp-action="Create">Create</a>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    Id
+                </td>
+                <td>
+                    Nome 
+                </td>
+                <td>
+                    Prontuario
+                </td>
+                <td>
+                    Idade
+                </td>
+            </tr>
+
+        </thead>
+        </table>
+</div>
+        <tbody>
+            @foreach (var aluno in Model)
+            {
+             <tr> 
+            <td>
+                    @aluno.Id
+                </td>
+                <td>
+                     @aluno.Nome
+                </td>
+                <td>
+                   @aluno.Prontuario
+                </td>
+                <td>
+                    @aluno.DataNascimento
+                </td>
+                </tr>
+            }
+        </tbody>
+  
